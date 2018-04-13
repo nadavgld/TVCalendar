@@ -1,0 +1,53 @@
+a{
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+}
+
+a:hover{
+    color:white;
+    text-decoration: none;
+}
+
+.show-result{
+    margin-top:16vh;
+}
+
+.svg-inline--fa{
+    font-size: 24px;
+}
+
+.fa-calendar-alt{
+    margin-bottom: .7vh;
+}
+
+.fa-check:hover{
+    color: green;
+    cursor: pointer;
+}
+
+.fa-ban:hover{
+    color: brown;
+    cursor: pointer;
+}
+
+.checkShow{
+    display: -webkit-inline-box;
+}
+
+.show-title-large{
+    font-size: 36px;
+    margin:auto;
+    /* margin-top: 13vh; */
+}
+
+.show-title-large:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    color: var(--primary);
+}
+
+.image-box{
+    box-shadow: black 2px 2px 3px;
+    border-radius: 1em;
+}

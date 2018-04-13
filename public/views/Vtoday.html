@@ -1,0 +1,23 @@
+<div class="row" ng-init="getToday()">
+    <div class="col-md-12 text-center mt-5">
+        <h1 class="text-left">Today's shows</h1>
+        <div class="col-md-8 m-auto">
+            <ul class="list-group mt-2">
+                <li class="list-group-item list-group-item-light" ng-repeat="show in shows">
+                    
+                    <div class="col-md-4 pull-left">
+                        <img class="image-box" ng-if="show.show.image.medium" src="{{ show.show.image.medium }}" alt="">
+                        <img class="image-box" ng-if="!show.show.image.medium" src="https://cdn.releases.com/img/image/4a02ec26-7ae6-463b-a6c9-8305fabb2f31.jpg/300" alt="">
+                    </div>
+                    <div class="col-md-6 pull-right show-result show-title-large">
+                        <span ng-click="getShow(show.show.id)">
+                            {{show.show.name}}
+                            <br>
+                            S{{ show.season }} E{{ show.number }}
+                        </span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

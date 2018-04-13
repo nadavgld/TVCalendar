@@ -1,0 +1,29 @@
+<div class="row" ng-init="reload()">
+    <div class="col-md-12 text-center mt-5">
+        <input type="text" class="form-control" placeholder="Search.." ng-model="_search" ng-keyup="search($event)">
+
+        <div class="col-md-8 m-auto">
+            <ul class="list-group mt-2">
+                <li ng-if="hasSearched" class="list-group-item list-group-item-light" ng-repeat="show in searchResult">
+                    
+                    <div class="col-md-4 pull-left">
+                        <img class="image-box" ng-if="show.show.image.medium" src="{{ show.show.image.medium }}" alt="">
+                        <img class="image-box" ng-if="!show.show.image.medium" src="https://cdn.releases.com/img/image/4a02ec26-7ae6-463b-a6c9-8305fabb2f31.jpg/300" alt="">
+                    </div>
+                    <div class="col-md-6 pull-right show-result">
+                        {{show.show.name}}
+                        <br>
+                        <div class="checkShow">
+                            <div ng-click="favoriteShow(show)" ng-if="showList.indexOf(show.show.id) == -1">
+                                <i class="fa fa-check"></i>
+                            </div>
+                            <div ng-click="unFavoriteShow(show)" ng-if="showList.indexOf(show.show.id) > -1">
+                                <i class="fa fa-ban"></i>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

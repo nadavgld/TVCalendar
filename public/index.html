@@ -1,0 +1,42 @@
+<html ng-app="TVCal-App">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TVCalendar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-dark text-white">
+    
+    <main role="main">
+        
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>
+                        <i class="fa fa-calendar-alt" href="#!"></i>
+                        <a href="#!/">TVCalendar</a> |
+                        <a href="#!/myShows">My Shows</a> |
+                        <a href="#!/today">Today</a> 
+                    </h1>
+                    <div ng-view id="ngContainer" class="mt-5"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-route/angular-route.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/app.js"></script>
+    <script src="/controllers/Cindex.js"></script>
+    <script src="/controllers/CmyShows.js"></script>
+    <script src="/controllers/Ctoday.js"></script>
+</body>
+</html>

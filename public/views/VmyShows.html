@@ -1,0 +1,26 @@
+<div class="row" ng-init="updateScope()">
+    <div class="col-md-12 text-center mt-3">
+        <h1 class="text-left">my shows</h1>
+        <div class="col-md-8 m-auto">
+            <ul class="list-group mt-2" ng-if="user.shows.length > 0">
+                <li class="list-group-item list-group-item-light" ng-repeat="show in user.shows">
+                    
+                    <div class="col-md-4 pull-left">
+                        <img class="image-box" ng-if="show.show.image.medium" src="{{ show.show.image.medium }}" alt="">
+                        <img class="image-box" ng-if="!show.show.image.medium" src="https://cdn.releases.com/img/image/4a02ec26-7ae6-463b-a6c9-8305fabb2f31.jpg/300" alt="">
+                    </div>
+                    <div class="col-md-6 pull-right show-result">
+                        <span ng-click="getShow(show.show.id)" class="show-title-large">
+                            {{show.show.name}}
+                        </span>
+                        <br>
+                        <a class="text-dark" href="https://rarbgproxy.org/torrents.php?category=1;18;41;49&search={{show.show.name}}&order=leechers&by=DESC" target="_blank">
+                            <i class="fa fa-download"></i> Find Torrent
+                        </a>
+                    </div>
+                </li>
+            </ul>
+            <div ng-if="user.shows.length == 0"> No data found. </div>
+        </div>
+    </div>
+</div>
