@@ -1,0 +1,16 @@
+<div class="row" ng-init="loadEpisodes()">
+    <div class="col-md-12 text-center mt-5">
+        <div class="col-md-8 m-auto">
+            <ul class="list-group mt-2">
+                <li class="list-group-item list-group-item-light" style="display: -webkit-inline-box" ng-repeat="ep in episodes">
+                    <div>
+                        <input class="" type="checkbox" ng-click="toggleEpisode(show,ep.season,ep.number)">
+                        <b>
+                            <a class="epLink" href="{{ep.url}}" target="_blank"> {{ep.name}} </a>
+                        </b> ( S{{ep.season}} E{{ep.number}} )
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

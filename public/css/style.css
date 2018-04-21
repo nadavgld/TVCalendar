@@ -51,3 +51,12 @@ a:hover{
     box-shadow: black 2px 2px 3px;
     border-radius: 1em;
 }
+
+.epLink{
+    color: var(--primary)
+}
+
+.epLink:hover{
+    color: var(--primary);
+    text-decoration: underline;
+}
